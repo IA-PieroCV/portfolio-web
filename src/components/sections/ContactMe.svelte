@@ -39,10 +39,12 @@
             >Name:</label
           >
           <input
+            id="name"
             type="text"
             bind:value={fields.name}
             class="shadow appearance-none border border-gray-300 rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Name"
+            autocomplete="name"
           />
           <Message name="name" />
         </div>
@@ -54,10 +56,12 @@
             for="email">Email:</label
           >
           <input
+            id="email"
             type="email"
             bind:value={fields.email}
             class="shadow appearance-none border border-gray-300 rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Email address"
+            autocomplete="email"
           />
           <Message name="email" />
         </div>
@@ -69,6 +73,7 @@
             for="message">Message:</label
           >
           <textarea
+            id="message"
             bind:value={fields.message}
             class="custom-scrollbar shadow appearance-none border border-gray-300 rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline"
             rows="4"
