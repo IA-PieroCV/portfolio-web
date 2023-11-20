@@ -1,0 +1,45 @@
+---
+import HomeIcon from "../icons/HomeIcon.astro";
+import BlogIcon from "../icons/BlogIcon.astro";
+---
+
+<ul
+  class="md:flex hidden w-full text-gray-300 text-sans gap-4 md:gap-6 justify-center items-center md:bg-transparent md:flex-row flex-col nav-links"
+>
+  <li>
+    <a
+      href="#"
+      class="flex flex-row items-center gap-3 hover:text-blue-400"
+    >
+      <HomeIcon />
+      <p>HOME</p>
+    </a>
+  </li>
+  <li>
+    <a
+      href="#"
+      class="flex flex-row items-center gap-3 hover:text-blue-400"
+    >
+      <BlogIcon />
+      <p>BLOG</p>
+    </a>
+  </li>
+</ul>
+
+<style>
+  .nav-links.expanded {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Position it right below the nav */
+    left: 0;
+    right: 0;
+    background-color: rgb(15 23 42); /* Match the nav background */
+    padding: 1rem 0; /* Add some padding */
+    text-align: center; /* Center the text */
+  }
+
+  .nav-links a {
+    transition: color 0.2s ease; /* Smooth color transition for hover */
+  }
+</style>

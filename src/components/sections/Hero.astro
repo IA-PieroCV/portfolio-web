@@ -1,0 +1,49 @@
+<section
+  class="relative text-center p-10 md:text-left bg-cover bg-center flex"
+  style="background-image: url('src/assets/hero2.webp');"
+>
+  <div class="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70"></div>
+
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center gap-10 relative">
+    <div>
+      <h1 class="text-4xl md:text-7xl font-bold text-white animate-fade-in-up" style="animation-delay: 0s;">Hi there!</h1>
+      <h2 class="text-xl md:text-4xl font-bold text-gray-100 animate-fade-in-up" style="animation-delay: 0.2s;">
+        Interested in AI, eh? I got your back...
+      </h2>
+      <p class="text-md md:text-xl my-8 text-gray-200 animate-fade-in-up" style="animation-delay: 0.4s;">
+        I'm Piero, a seasoned Data Scientist committed to leveraging AI and
+        Machine Learning to drive innovation and tangible business outcomes.
+      </p>
+      <a
+        href="#contact"
+        class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-md duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 animate-fade-in-up"
+        style="animation-delay: 0.6s;"
+      >
+        Let's talk!
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 75vh;
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out both;
+  }
+
+  /* Rest of your CSS */
+</style>

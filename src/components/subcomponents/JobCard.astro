@@ -1,0 +1,53 @@
+---
+const { title, role, image_url, description, technologies, achievement } = Astro.props;
+---
+
+<div
+  class="parent_card max-w-md rounded overflow-hidden shadow-lg bg-gray-800 hover:shadow-xl transition-shadow duration-300 text-gray-300"
+>
+  <img
+    src={image_url}
+    alt={`Image for ${title}`}
+    class="w-full h-32 object-cover"
+  />
+  <div class="px-6 py-4">
+    <h3 class="font-bold text-xl mb-2 text-white">{title}</h3>
+    <h4 class="font-semibold text-lg mb-2 ">{role}</h4>
+    <p class="text-base">
+      {description}
+    </p>
+    <p class="text-base italic">
+      {achievement}
+    </p>
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    {
+      technologies.map((tech: string) => (
+        <span class="inline-block bg-blue-600 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">
+          {tech}
+        </span>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .parent_card {
+    animation: reveal-jobs linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+  }
+
+  @keyframes reveal-jobs {
+    from {
+      opacity: 0%;
+      transform: translateY(30px);
+      scale: 1.1;
+    }
+    to {
+      opacity: 100%;
+      transform: translateY(0px);
+      scale: 1;
+    }
+  }
+</style>

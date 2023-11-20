@@ -1,0 +1,50 @@
+<section class="bg-gray-800 p-10">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-white text-center mb-6">About Me</h2>
+    <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+      <img
+        src="src/assets/me.webp"
+        alt="Piero Casusol"
+        class="w-48 md:w-72 h-auto rounded-full shadow-lg"
+      />
+      <div class="max-w-xl">
+        <p class="text-gray-300">
+          I am Piero Casusol, a <strong class="text-blue-300"
+            >data scientist</strong
+          > and AI engineer dedicated to integrating artificial intelligence
+          into real-world applications. My expertise lies in computer vision,
+          natural language processing, and tabular data, where I have
+          consistently delivered business value through risk reduction, cost
+          efficiency, and streamlined operations. I prioritize business
+          objectives and champion agile methodologies to foster collaborative
+          and results-driven team environments. Committed to advancing AI, I
+          strive to blend technical innovation with practical business
+          solutions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    animation: reveal-img linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+  }
+  p {
+    animation: reveal-img linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+  }
+  @keyframes reveal-img {
+    from {
+      opacity: 0%;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 100%;
+      transform: translateY(0px);
+    }
+  }
+</style>

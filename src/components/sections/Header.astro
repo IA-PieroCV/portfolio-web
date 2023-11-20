@@ -1,0 +1,47 @@
+---
+import Hamburguer from "../subcomponents/Hamburguer.astro";
+import HeaderMenu from "../subcomponents/HeaderMenu.astro";
+---
+
+<header class="sticky top-0 z-50 shadow-md m-0 p-0">
+  <nav class="flex items-center px-4 md:px-0 md:flex-row flex-col">
+    <Hamburguer />
+    <HeaderMenu />
+  </nav>
+  <script>
+    import "../../scripts/menu";
+  </script>
+</header>
+
+<style>
+  header {
+    animation: header-stick linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0px 200px;
+    background-color: rgb(15 23 42 /1);
+  }
+
+  @keyframes header-stick {
+    100% {
+      font-size: 14px;
+      background-color: rgb(15 23 42 /0.5);
+    }
+  }
+
+  header nav {
+    animation: nav-height linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0px 200px;
+    font-size: large;
+    height: 6rem;
+  }
+
+  @keyframes nav-height {
+    to {
+      height: 3rem;
+      font-size: medium;
+      background-color: rgb(30 30 30 /0.5);
+      backdrop-filter: blur(5px);
+    }
+  }
+</style>

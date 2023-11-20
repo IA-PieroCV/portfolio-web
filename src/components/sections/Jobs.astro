@@ -1,0 +1,27 @@
+---
+import JobCard from "../subcomponents/JobCard.astro";
+import jobs from "../../data/jobs";
+import type { Job } from "../../interfaces/Job";
+
+const jobs_list: Job[] = jobs;
+---
+
+<section class="bg-gray-900 p-10">
+  <div class="max-w-full mx-auto">
+    <h2 class="text-4xl font-bold text-white text-center mb-6">My Recent Jobs</h2>
+    <div class="flex flex-wrap gap-10 justify-center">
+      {
+        jobs_list.map((job) => (
+          <JobCard
+            title={job.company}
+            role={job.role}
+            image_url={job.image_url}
+            description={job.description}
+            technologies={job.technologies}
+            achievement={job.achievement}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

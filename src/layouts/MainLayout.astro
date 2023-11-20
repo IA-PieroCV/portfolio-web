@@ -1,0 +1,29 @@
+---
+import Header from "../components/sections/Header.astro";
+import Footer from "../components/sections/Footer.astro";
+import "../styles/global.css";
+const { title_page } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title_page}</title>
+  </head>
+
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+
+  <style>
+    html,
+    body {
+      background-color: rgb(15 23 42 /1);
+      scroll-behavior: smooth;
+    }
+  </style>
+</html>
